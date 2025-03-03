@@ -73,7 +73,7 @@ internal class Program
             var connected = await client.GetConnectionStatusAsync(selectedPrinter.Key);
 
             if (!connected)
-                connected = await client.ConnectAsync(selectedPrinter.Value);
+                connected = await client.ConnectAsync(selectedPrinter.Key);
 
             Console.WriteLine($"Connection status: {(connected ? "Connected" : "Not Connected")}");
 
